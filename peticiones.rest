@@ -1,0 +1,7 @@
+@PORT = 3000
+@HOST = http://localhost:{{PORT}}
+
+GET {{HOST}}/api/posts
+
+###
+GET {{HOST}}/api/posts/1
