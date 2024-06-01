@@ -4,4 +4,35 @@
 GET {{HOST}}/api/posts
 
 ###
-GET {{HOST}}/api/posts/1
+GET {{HOST}}/api/posts/3
+
+###
+GET {{HOST}}/api/posts/autor/1
+
+### para probar error por no haber posts de autor Id=100
+GET {{HOST}}/api/posts/autor/100
+
+###
+POST {{HOST}}/api/posts
+Content-Type: application/json
+
+{
+    "titulo": "Trump declarado culpable",
+    "descripcion": "Trumpo ha sido el primer expresidente condenado por un tribunal. Se le ha declarado culpable de 34 delitos. Se desconoce como afectara a su campaña, pues no esta claro que no tenga que ir a la cárcel. Su edad, status y su falta de delitos anteriores, le pueden librar de ella.",
+    "categoria": "Internacional",
+    "fk_id_autores": "1"
+}
+
+###
+PUT {{HOST}}/api/posts/5
+Content-Type: application/json
+
+{
+    "titulo": "Orbaneja, escapada rural",
+    "descripcion": "Este municipio del norte de Burgos merece una visita. Esta en un entorno espcetacular, en el cañon del Río Ebro. El pueblo en sí esta separado en dos por una cascada de 20 metros, y un puente une las dos partes. Hay muchas actividades para hacer relacionadas con la naturaleza: senderismo, barranquismo, escalada, kayaks...",
+    "categoria": "Ocio",
+    "fk_id_autores": "2"
+}
+
+###
+DELETE {{HOST}}/api/posts/6
