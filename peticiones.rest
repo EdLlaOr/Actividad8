@@ -36,3 +36,33 @@ Content-Type: application/json
 
 ###
 DELETE {{HOST}}/api/posts/6
+
+
+###
+GET {{HOST}}/api/autores
+
+###
+GET {{HOST}}/api/autores/2
+
+###
+POST {{HOST}}/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Carlos Perez",
+    "email": "cperez@gmail.com",
+    "imagen": "http://images/cperez.jpg"
+}
+
+###
+PUT {{HOST}}/api/autores/5
+Content-Type: application/json
+
+{
+    "nombre": "Ana Marinez",
+    "email": "amartinez@gmail.com",
+    "imagen": "http://images/amtnz.jpg"
+}
+
+###
+DELETE {{HOST}}/api/autores/5
